@@ -12,7 +12,7 @@ int main() {
   //printf("%f x %f is %f (expected 40)\n", a, b, mul(a, b));
 
   // to test fac
-  //printf("factorial of -4 is %f (expected 0)\n", fac(-4));
+  //printf("factorial of -4 is %d (expected 0)\n", fac(-4));
   //printf("factorial of 10 is %d (expected 3628800)\n", fac(10));
 
   return 0;
