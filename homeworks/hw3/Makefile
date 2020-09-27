@@ -11,4 +11,4 @@ hw3.o: hw3.c functions.h
 	$(GCC) -c hw3.c $(CFLAGS)
 
 clean:
-	rm -f *.o regex test *~
+	rm -f *.o hw3 test *~
