@@ -38,7 +38,7 @@ int main() {
   clear_list(&my_list);
 
 
-  /******  This section primarily tests delete_after and deleteFront. Uncomment after ex6-2 Part 2.
+  /******  This section primarily tests delete_after and deleteFront. Uncomment after Part 2.
 
   // test deleteFront, delete_after
   add_front(&my_list, 'A');
@@ -69,7 +69,7 @@ int main() {
 
 
 
-  /******  This section primarily tests remove_all. Uncomment after ex6-2 Part 4.
+  /******  This section primarily tests remove_all. Uncomment after Part 4.
 
   // test remove_all
   for (char c = 'a'; c < 'j'; c++) {
@@ -103,7 +103,7 @@ int main() {
    */
 
 
-  /******  This section primarily tests insert. Uncomment after ex6-2 Part 6.
+  /******  This section primarily tests insert. Uncomment after Part 6.
 
   // test insert
   for (char c = 'A'; c < 'F'; c++) {
@@ -130,7 +130,7 @@ int main() {
    */
 
 
-  /******  This section tests functions not required in ex6-2.
+  /******  This section tests functions not required in the exercise.
 
   add_front(&my_list, 'S');
   add_tail(&my_list, 'N');
