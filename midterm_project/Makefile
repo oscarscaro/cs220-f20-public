@@ -11,7 +11,7 @@ CFLAGS=-std=c99 -pedantic -Wall -Wextra
 ## Below are commands to link and compile the checkerboard program
 # Links together files needed to create the checkerboard executable
 checkerboard : checkerboard.o ppm_io.o
-	$(CC) -static -o $@ checkerboard.o ppm_io.o
+	$(CC) -o $@ checkerboard.o ppm_io.o
 
 # Compile the ppm i/o source code
 ppm_io.o: ppm_io.c ppm_io.h
