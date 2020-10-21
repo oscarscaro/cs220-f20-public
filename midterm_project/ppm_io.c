@@ -22,7 +22,7 @@ int ReadNum(FILE *fp) {
   /* confirm that we received a good file handle */
   assert(fp);
 
-  char ch;
+  int ch; // use int, which is in fact return type of fgetc to avoid casting of 255 to -1
   while((ch = fgetc(fp)) == '#') { // # marks a comment line
     while( ((ch = fgetc(fp)) != '\n') && ch != EOF ) {
       /* discard characters til end of line */
@@ -32,11 +32,10 @@ int ReadNum(FILE *fp) {
 
   int val;
   if (fscanf(fp, "%d", &val) == 1) { // try to get an int
-    unsigned char ch; // use unsigned char to avoid implicit casting from 255 to -1
     while(isspace(ch = fgetc(fp))) {
       // drop trailing whitespace
     }
-    ungetc(ch, fp); // now 255 is put back to the stream instead of putting EOF (-1)
+    ungetc(ch, fp);
     
     return val; // we got a value, so return it
   } else {
