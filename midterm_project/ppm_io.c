@@ -32,10 +32,12 @@ int ReadNum(FILE *fp) {
 
   int val;
   if (fscanf(fp, "%d", &val) == 1) { // try to get an int
+    unsigned char ch; // use unsigned char to avoid implicit casting from 255 to -1
     while(isspace(ch = fgetc(fp))) {
       // drop trailing whitespace
     }
-    ungetc(ch, fp);
+    ungetc(ch, fp); // now 255 is put back to the stream instead of putting EOF (-1)
+    
     return val; // we got a value, so return it
   } else {
     fprintf(stderr, "Error:ppm_io - failed to read number from file\n");
@@ -144,3 +146,4 @@ int WritePPM(FILE *fp, const Image *im) {
   // return number of pixels written
   return num_pixels_written;
 }
+
